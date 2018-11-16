@@ -14,5 +14,12 @@
     This is a demo application for <a href="https://admob-plus.github.io/">AdMob Plus</a>.
   </p>
 
-  <ion-button secondary href="/playground" routerDirection="forward">Playground</ion-button>
+  <ion-item>
+    <ion-label position="floating">Device ID</ion-label>
+    <ion-input [value]="deviceId" readonly></ion-input>
+  </ion-item>
+
+  <p>
+    <ion-button secondary href="/playground" routerDirection="forward">Playground</ion-button>
+  </p>
 </ion-content>

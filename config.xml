@@ -88,6 +88,6 @@
         <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
     </plugin>
     <engine name="ios" spec="~4.5.5" />
-    <engine name="android" spec="~7.1.2" />
     <engine name="browser" spec="~5.0.4" />
+    <engine name="android" spec="~7.1.2" />
 </widget>

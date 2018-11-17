@@ -101,7 +101,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "ng lint && lint-staged"
     }
   },
   "lint-staged": {
@@ -111,9 +111,6 @@
     "package.json": [
       "prettier --write",
       "git add"
-    ],
-    "*.{html,js,scss,ts}": [
-      "ng lint"
     ]
   }
 }

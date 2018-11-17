@@ -8,9 +8,9 @@ import { Device } from '@ionic-native/device/ngx';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  deviceId: string;
+  constructor(private device: Device) {}
 
-  constructor(private device: Device) {
-    this.deviceId = device.uuid === null ? 'N/A' : md5(`${device.uuid}`).toUpperCase();
+  get deviceId() {
+    return this.device.uuid === null ? 'N/A' : md5(`${this.device.uuid}`).toUpperCase();
   }
 }

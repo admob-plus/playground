@@ -9,6 +9,7 @@ import { PlaygroundPage } from './playground.page';
 import { BannerComponent } from './banner/banner.component';
 import { InterstitialComponent } from './interstitial/interstitial.component';
 import { RewardVideoComponent } from './reward-video/reward-video.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PlaygroundPage, BannerComponent, InterstitialComponent, RewardVideoComponent]
+  declarations: [PlaygroundPage, BannerComponent, InterstitialComponent, RewardVideoComponent, TabsComponent]
 })
 export class PlaygroundPageModule {}

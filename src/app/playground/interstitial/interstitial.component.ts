@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdMob } from '@admob-plus/ionic';
 
 @Component({
   selector: 'app-interstitial',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterstitialComponent implements OnInit {
 
-  constructor() { }
+  constructor(private admob: AdMob) { }
 
   ngOnInit() {
   }
 
+  load() {
+    this.admob.interstitial.load({ id: 'test' }).catch(console.log);
+  }
+
+  show() {
+    this.admob.interstitial.show().catch(console.log);
+  }
 }

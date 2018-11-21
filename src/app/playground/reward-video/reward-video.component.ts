@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdMob } from '@admob-plus/ionic';
 
 @Component({
   selector: 'app-reward-video',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RewardVideoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private admob: AdMob) { }
 
   ngOnInit() {
   }
 
+  load() {
+    this.admob.rewardVideo.load({ id: 'test' }).catch(console.log);
+  }
+
+  show() {
+    this.admob.rewardVideo.show().catch(console.log);
+  }
 }

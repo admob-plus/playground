@@ -1,0 +1,16 @@
+<ion-item>
+  <ion-label>childDirectedTreatment</ion-label>
+  <ion-select interface="popover" [value]="childDirectedTreatmentString" (ionChange)="changeChildDirectedTreatment($event)">
+    <ion-select-option value="undefined">undefined</ion-select-option>
+    <ion-select-option value="true">true</ion-select-option>
+    <ion-select-option value="false">false</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-item>
+  <ion-label>underAgeOfConsent</ion-label>
+  <ion-select interface="popover" [value]="underAgeOfConsentString" (ionChange)="changeUnderAgeOfConsent($event)">
+    <ion-select-option value="undefined">undefined</ion-select-option>
+    <ion-select-option value="true">true</ion-select-option>
+    <ion-select-option value="false">false</ion-select-option>
+  </ion-select>
+</ion-item>

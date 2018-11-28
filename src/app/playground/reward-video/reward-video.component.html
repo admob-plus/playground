@@ -5,6 +5,7 @@
       <h3>Reward Video Ad</h3>
 
       <ion-list>
+        <app-ad-request-options (adRequestChange)="onAdRequestChange($event)"></app-ad-request-options>
         <ion-button style="text-transform: none;" (click) ="load()">admob.rewardVideo.load()</ion-button>
         <ion-button style="text-transform: none;" (click) ="show()">admob.rewardVideo.show()</ion-button>
       </ion-list>

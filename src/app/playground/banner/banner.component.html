@@ -4,8 +4,9 @@
       <h3>Banner Ad</h3>
 
       <ion-list>
-        <ion-button style="text-transform: none;" (click) ="show()">admob.banner.show()</ion-button>
-        <ion-button style="text-transform: none;" (click) ="hide()">admob.banner.hide()</ion-button>
+        <app-ad-request-options (adRequestChange)="onAdRequestChange($event)"></app-ad-request-options>
+        <ion-button style="text-transform: none;" (click)="show()">admob.banner.show()</ion-button>
+        <ion-button style="text-transform: none;" (click)="hide()">admob.banner.hide()</ion-button>
       </ion-list>
     </ion-col>
   </ion-row>

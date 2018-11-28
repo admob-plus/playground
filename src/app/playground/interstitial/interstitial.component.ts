@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IAdRequest } from '@admob-plus/core';
 import { AdMob } from '@admob-plus/ionic';
 
 @Component({
@@ -7,14 +8,21 @@ import { AdMob } from '@admob-plus/ionic';
   styleUrls: ['./interstitial.component.scss']
 })
 export class InterstitialComponent implements OnInit {
+  private adRequest: IAdRequest;
 
-  constructor(private admob: AdMob) { }
+  constructor(private admob: AdMob) {
+    this.adRequest = {id: 'test'};
+  }
 
   ngOnInit() {
   }
 
+  onAdRequestChange(adRequest) {
+    this.adRequest = adRequest;
+  }
+
   load() {
-    this.admob.interstitial.load({ id: 'test' }).catch(console.log);
+    this.admob.interstitial.load(this.adRequest).catch(console.log);
   }
 
   show() {

@@ -17,7 +17,7 @@ const convertBoolean = s => {
   styleUrls: ['./ad-request-options.component.scss']
 })
 export class AdRequestOptionsComponent implements OnInit {
-  @Input() childDirectedTreatment: boolean | undefined;
+  @Input() childDirected: boolean | undefined;
   @Input() underAgeOfConsent: boolean | undefined;
   @Output() adRequestChange = new EventEmitter<IAdRequest>();
 
@@ -26,16 +26,16 @@ export class AdRequestOptionsComponent implements OnInit {
   ngOnInit() {
   }
 
-  get childDirectedTreatmentString() {
-    return String(this.childDirectedTreatment);
+  get childDirectedString() {
+    return String(this.childDirected);
   }
 
   get underAgeOfConsentString() {
     return String(this.underAgeOfConsent);
   }
 
-  changeChildDirectedTreatment($event) {
-    this.childDirectedTreatment = convertBoolean($event.target.value);
+  changeChildDirected($event) {
+    this.childDirected = convertBoolean($event.target.value);
     this.triggerChange();
   }
 
@@ -47,7 +47,7 @@ export class AdRequestOptionsComponent implements OnInit {
   triggerChange() {
     this.adRequestChange.emit({
       id: 'test',
-      childDirectedTreatment: this.childDirectedTreatment,
+      childDirected: this.childDirected,
       underAgeOfConsent: this.underAgeOfConsent
     });
   }

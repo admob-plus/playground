@@ -21,6 +21,8 @@ export class EventsComponent implements OnInit {
 
   getEvents(): void {
     this.eventService.getEvents()
-        .subscribe(events => this.events = events);
+        .subscribe(events => {
+          this.events = this.filter ? events.filter(({ name }) => name.indexOf(this.filter) > -1) : events;
+        });
   }
 }

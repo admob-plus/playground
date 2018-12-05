@@ -14,6 +14,7 @@ export class EventService {
 
   constructor() {
     [
+      Events.ready,
       Events.banner_load,
       Events.banner_load_fail,
       Events.banner_exit_app,

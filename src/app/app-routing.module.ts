@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'playground',
     loadChildren: './playground/playground.module#PlaygroundPageModule'
   },
+  { path: 'event-log', loadChildren: './event-log/event-log.module#EventLogPageModule' },
 ];
 
 @NgModule({

@@ -21,6 +21,11 @@ export class AppComponent {
       url: '/playground',
       icon: 'apps',
     },
+    {
+      title: 'Event Log',
+      url: '/event-log',
+      icon: 'list',
+    },
   ];
 
   constructor(

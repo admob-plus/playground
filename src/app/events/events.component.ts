@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Event, EventService } from '../event.service';
+import { EventService } from '../event.service';
 
 @Component({
   selector: 'app-events',
@@ -10,19 +10,13 @@ import { Event, EventService } from '../event.service';
 export class EventsComponent implements OnInit {
   @Input() filter: string;
 
-  public events: Event[];
-
   constructor(private eventService: EventService) {
   }
 
   ngOnInit() {
-    this.getEvents();
   }
 
-  getEvents(): void {
-    this.eventService.getEvents()
-        .subscribe(events => {
-          this.events = this.filter ? events.filter(({ name }) => name.indexOf(this.filter) > -1) : events;
-        });
+  get events() {
+    return this.filter ? this.eventService.events.filter(({name}) => name.indexOf(this.filter) > -1) : this.eventService.events;
   }
 }

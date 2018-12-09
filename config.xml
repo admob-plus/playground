@@ -87,7 +87,7 @@
         <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" />
         <variable name="PLAY_SERVICES_VERSION" value="17.1.2" />
     </plugin>
+    <engine name="browser" spec="5.0.4" />
+    <engine name="android" spec="7.1.4" />
     <engine name="ios" spec="~4.5.5" />
-    <engine name="browser" spec="~5.0.4" />
-    <engine name="android" spec="~7.1.2" />
 </widget>

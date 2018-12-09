@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IAdRequest } from '@admob-plus/core';
+import { IBannerRequest } from '@admob-plus/core';
 import { AdMob } from '@admob-plus/ionic';
 
 @Component({
@@ -8,7 +8,7 @@ import { AdMob } from '@admob-plus/ionic';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
-  private adRequest: IAdRequest;
+  private adRequest: IBannerRequest;
 
   constructor(private admob: AdMob) {
     this.adRequest = {id: 'test'};
@@ -26,6 +26,6 @@ export class BannerComponent implements OnInit {
   }
 
   hide() {
-    this.admob.banner.hide();
+    this.admob.banner.hide(this.adRequest.id);
   }
 }

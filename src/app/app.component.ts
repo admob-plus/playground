@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AdMob } from '@admob-plus/ionic';
 
+import { environment } from '../environments/environment';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -42,7 +44,7 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-      this.admob.banner.show({ id: 'test' }).catch(console.log);
+      this.admob.banner.show({ id: environment.banner }).catch(console.log);
     });
   }
 }

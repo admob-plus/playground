@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { IBannerRequest } from '@admob-plus/core';
 import { AdMob } from '@admob-plus/ionic';
 
+import { environment } from '../../../environments/environment';
+
 @Component({
   selector: 'app-tab-banner',
   templateUrl: './tab-banner.page.html',
@@ -11,7 +13,7 @@ export class TabBannerPage implements OnInit {
   private adRequest: IBannerRequest;
 
   constructor(private admob: AdMob) {
-    this.adRequest = {id: 'test'};
+    this.adRequest = {id: environment.banner};
   }
 
   ngOnInit() {

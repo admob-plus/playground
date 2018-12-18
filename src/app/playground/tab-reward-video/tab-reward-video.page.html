@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reward Video Ad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <app-ad-request-options (adRequestChange)="onAdRequestChange($event)"></app-ad-request-options>
+    <ion-button style="text-transform: none;" (click) ="load()">admob.rewardVideo.load()</ion-button>
+    <ion-button style="text-transform: none;" (click) ="show()">admob.rewardVideo.show()</ion-button>
+  </ion-list>
+  <app-events filter="reward_video"></app-events>
+</ion-content>

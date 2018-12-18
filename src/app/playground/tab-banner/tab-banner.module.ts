@@ -5,13 +5,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EventsModule } from './events/events.module';
-import { EventLogPage } from './event-log.page';
+import { EventsModule } from '../../event-log/events/events.module';
+import { AdRequestOptionsModule } from '../ad-request-options/ad-request-options.module';
+
+import { TabBannerPage } from './tab-banner.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: EventLogPage
+    component: TabBannerPage
   }
 ];
 
@@ -21,8 +23,9 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     EventsModule,
+    AdRequestOptionsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [EventLogPage]
+  declarations: [TabBannerPage]
 })
-export class EventLogPageModule {}
+export class TabBannerPageModule {}

@@ -3,11 +3,11 @@ import { IBannerRequest } from '@admob-plus/core';
 import { AdMob } from '@admob-plus/ionic';
 
 @Component({
-  selector: 'app-banner',
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.scss']
+  selector: 'app-tab-banner',
+  templateUrl: './tab-banner.page.html',
+  styleUrls: ['./tab-banner.page.scss'],
 })
-export class BannerComponent implements OnInit {
+export class TabBannerPage implements OnInit {
   private adRequest: IBannerRequest;
 
   constructor(private admob: AdMob) {

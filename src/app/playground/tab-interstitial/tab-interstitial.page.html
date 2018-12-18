@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Interstitial Ad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <app-ad-request-options (adRequestChange)="onAdRequestChange($event)"></app-ad-request-options>
+    <ion-button style="text-transform: none;" (click) ="load()">admob.interstitial.load()</ion-button>
+    <ion-button style="text-transform: none;" (click) ="show()">admob.interstitial.show()</ion-button>
+  </ion-list>
+  <app-events filter="interstitial"></app-events>
+</ion-content>

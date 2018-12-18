@@ -1,20 +1,22 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InterstitialComponent } from './interstitial.component';
+import { TabBannerPage } from './tab-banner.page';
 
-describe('InterstitialComponent', () => {
-  let component: InterstitialComponent;
-  let fixture: ComponentFixture<InterstitialComponent>;
+describe('TabBannerPage', () => {
+  let component: TabBannerPage;
+  let fixture: ComponentFixture<TabBannerPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InterstitialComponent ]
+      declarations: [ TabBannerPage ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InterstitialComponent);
+    fixture = TestBed.createComponent(TabBannerPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

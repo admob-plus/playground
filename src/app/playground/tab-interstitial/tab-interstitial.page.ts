@@ -3,11 +3,11 @@ import { IAdRequest } from '@admob-plus/core';
 import { AdMob } from '@admob-plus/ionic';
 
 @Component({
-  selector: 'app-reward-video',
-  templateUrl: './reward-video.component.html',
-  styleUrls: ['./reward-video.component.scss']
+  selector: 'app-tab-interstitial',
+  templateUrl: './tab-interstitial.page.html',
+  styleUrls: ['./tab-interstitial.page.scss'],
 })
-export class RewardVideoComponent implements OnInit {
+export class TabInterstitialPage implements OnInit {
   private adRequest: IAdRequest;
 
   constructor(private admob: AdMob) {
@@ -22,10 +22,10 @@ export class RewardVideoComponent implements OnInit {
   }
 
   load() {
-    this.admob.rewardVideo.load(this.adRequest).catch(console.log);
+    this.admob.interstitial.load(this.adRequest).catch(console.log);
   }
 
   show() {
-    this.admob.rewardVideo.show().catch(console.log);
+    this.admob.interstitial.show().catch(console.log);
   }
 }

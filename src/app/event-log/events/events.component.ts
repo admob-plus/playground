@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { EventService } from '../event.service';
+import { EventService } from '../../event.service';
 
 @Component({
   selector: 'app-events',

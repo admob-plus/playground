@@ -5,19 +5,29 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EventsModule } from '../events/events.module';
-
 import { PlaygroundPage } from './playground.page';
-import { BannerComponent } from './banner/banner.component';
-import { InterstitialComponent } from './interstitial/interstitial.component';
-import { RewardVideoComponent } from './reward-video/reward-video.component';
-import { TabsComponent } from './tabs/tabs.component';
-import { AdRequestOptionsComponent } from './ad-request-options/ad-request-options.component';
 
 const routes: Routes = [
   {
     path: '',
     component: PlaygroundPage,
+    children: [
+      {
+        path: 'banner',
+        children: [{ path: '', loadChildren: './tab-banner/tab-banner.module#TabBannerPageModule' }]
+      },
+      {
+        path: 'interstitial',
+        children: [{ path: '', loadChildren: './tab-interstitial/tab-interstitial.module#TabInterstitialPageModule' }]
+      },
+      {
+        path: 'reward-video',
+        children: [{ path: '', loadChildren: './tab-reward-video/tab-reward-video.module#TabRewardVideoPageModule' }]
+      },
+      {
+        path: '', redirectTo: '/playground/banner', pathMatch: 'full'
+      }
+    ]
   }
 ];
 
@@ -26,9 +36,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    EventsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PlaygroundPage, BannerComponent, InterstitialComponent, RewardVideoComponent, TabsComponent, AdRequestOptionsComponent]
+  declarations: [PlaygroundPage]
 })
 export class PlaygroundPageModule {}

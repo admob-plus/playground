@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Banner Ad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <app-ad-request-options (adRequestChange)="onAdRequestChange($event)"></app-ad-request-options>
+    <ion-button style="text-transform: none;" (click)="show()">admob.banner.show()</ion-button>
+    <ion-button style="text-transform: none;" (click)="hide()">admob.banner.hide()</ion-button>
+  </ion-list>
+  <app-events filter="banner"></app-events>
+</ion-content>
